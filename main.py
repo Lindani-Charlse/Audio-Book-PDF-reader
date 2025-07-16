@@ -6,8 +6,8 @@ the_book = askopenfilename()
 pdfreader = PyPDF2.PdfReader(the_book)
 pages = len(pdfreader.pages)
 
-for num in range(0, pages):
-    page = pdfreader.pages[num]
+for count in range(0, pages):
+    page = pdfreader.pages[count]
     text = page.extract_text()
     player = pyttsx3.init()
     player.say(text)
